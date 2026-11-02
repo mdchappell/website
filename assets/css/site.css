@@ -1,20 +1,20 @@
 /* Marissa Chappell — academic site
-   Professional theme: navy and slate on white; Source Serif 4 headings, Source Sans 3 body. */
+   Professional theme: forest green and slate on white; Source Serif 4 headings, Source Sans 3 body. */
 
 
 
 :root {
   --bg: #ffffff;
-  --surface: #f4f6f8;
-  --ink: #1b2330;          /* near-black slate */
-  --ink-soft: #4f5a69;
-  --lupine: #1f3a5f;       /* navy: links, buttons, accents */
-  --paintbrush: #142a47;   /* navy, darker: hover */
-  --marigold: #1f3a5f;     /* focus ring */
-  --verdigris: #1f3a5f;
-  --verdigris-text: #4f5a69;
-  --sage: #d7dce3;
-  --rule: #e1e5ea;
+  --surface: #f2f6f3;
+  --ink: #1a241f;          /* near-black green */
+  --ink-soft: #4d5a52;
+  --lupine: #22543a;       /* forest green: links, buttons, accents */
+  --paintbrush: #173d29;   /* forest, darker: hover */
+  --marigold: #22543a;     /* focus ring */
+  --verdigris: #22543a;
+  --verdigris-text: #4d5a52;
+  --sage: #d3ded6;
+  --rule: #dfe6e1;
   --on-accent: #ffffff;
   --sign-filter: none;
 
@@ -28,17 +28,17 @@
 }
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
-    --bg: #12161d; --surface: #1b2129; --ink: #e8ebef; --ink-soft: #a9b2be;
-    --lupine: #9dbbe0; --paintbrush: #c3d6ee; --marigold: #9dbbe0;
-    --verdigris: #9dbbe0; --verdigris-text: #a9b2be; --sage: #2c3440; --rule: #2a313b; --on-accent: #12161d;
+    --bg: #111814; --surface: #19221d; --ink: #e7ede9; --ink-soft: #a8b7ad;
+    --lupine: #8fcba5; --paintbrush: #b8e0c6; --marigold: #8fcba5;
+    --verdigris: #8fcba5; --verdigris-text: #a8b7ad; --sage: #2a3830; --rule: #29342e; --on-accent: #111814;
     --sign-filter: invert(1);
     color-scheme: dark;
   }
 }
 :root[data-theme="dark"] {
-  --bg: #12161d; --surface: #1b2129; --ink: #e8ebef; --ink-soft: #a9b2be;
-  --lupine: #9dbbe0; --paintbrush: #c3d6ee; --marigold: #9dbbe0;
-  --verdigris: #9dbbe0; --verdigris-text: #a9b2be; --sage: #2c3440; --rule: #2a313b; --on-accent: #12161d;
+  --bg: #111814; --surface: #19221d; --ink: #e7ede9; --ink-soft: #a8b7ad;
+  --lupine: #8fcba5; --paintbrush: #b8e0c6; --marigold: #8fcba5;
+  --verdigris: #8fcba5; --verdigris-text: #a8b7ad; --sage: #2a3830; --rule: #29342e; --on-accent: #111814;
   --sign-filter: invert(1);
   color-scheme: dark;
 }
@@ -261,3 +261,9 @@ h3 { font-family: var(--body); font-weight: 600; letter-spacing: 0; }
   .hero { grid-template-areas: "photo" "text" "links"; grid-template-rows: auto; }
   .hero > .links { flex-direction: row; flex-wrap: wrap; max-width: none; }
 }
+
+/* audience group dividers */
+.group { width: calc(100% - 2.5rem); max-width: 69.5rem; margin: clamp(3.5rem, 7vw, 5.5rem) auto 0; padding: 1.25rem 0 0; border-top: 3px solid var(--lupine); }
+.group-label { margin: 0; font-family: var(--display); font-weight: 600; font-size: clamp(1.4rem, 1.2rem + .8vw, 1.8rem); color: var(--lupine); }
+.group-note { margin: .2rem 0 0; color: var(--ink-soft); }
+main .group + section { padding-top: clamp(1.75rem, 3vw, 2.5rem); }
