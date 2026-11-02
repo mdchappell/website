@@ -248,3 +248,16 @@ h3 { font-family: var(--body); font-weight: 600; letter-spacing: 0; }
   .community h2, .community .lede, .community .roles { grid-column: 1; }
   .community h2 { margin-bottom: 1rem; }
 }
+
+/* hero: photo with link buttons beneath it, text to the right */
+.hero { grid-template-areas: "photo text" "links text"; grid-template-rows: auto 1fr; row-gap: 1.5rem; }
+.portrait { grid-area: photo; }
+.hero-text { grid-area: text; min-width: 0; }
+.hero > .links { grid-area: links; flex-direction: column; align-items: stretch; gap: .5rem; margin: 0; max-width: 13rem; }
+.hero > .links a { display: flex; justify-content: center; text-align: center; padding: .45rem .5rem; }
+.hero > .links a { gap: .45rem; }
+.links .icon { width: 1.5em; height: 1.5em; flex: none; }
+@media (max-width: 860px) {
+  .hero { grid-template-areas: "photo" "text" "links"; grid-template-rows: auto; }
+  .hero > .links { flex-direction: row; flex-wrap: wrap; max-width: none; }
+}
