@@ -13,3 +13,6 @@ If you later use a custom domain, update the URLs in `index.html` (canonical, og
 - All content is in `index.html`; styles in `assets/css/site.css`.
 - Name sign: `assets/img/namesign.gif` (animated) and `namesign-still.png` (paused frame).
 - Footer credit: off. Discovery marker + schema.org structured data: on (see `<head>`).
+
+## After editing CSS or JS
+Bump the `?v=` value on the stylesheet and script tags in `index.html` so browsers load the new files instead of a cached copy.
